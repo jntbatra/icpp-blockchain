@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "iccp_backend": {
+      "main": "src/iccp_backend/main.mo",
+      "type": "motoko"
+    },
+    "iccp_frontend": {
+      "dependencies": [
+        "iccp_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/iccp_frontend/src/index.html"
+      },
+      "source": [
+        "src/iccp_frontend/assets",
+        "dist/iccp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
